@@ -1,0 +1,60 @@
+:root{
+    --black: #000000;
+    --surface-dark-color: #121212;
+    --surface-container-color: #282828;
+    --primary-color:#682ff3;
+    --primary-content-color:#9360f7;
+
+    --content-font: 'Roboto', sans-serif;
+    --heading-font: 'Poppins';
+
+    --text-color: #d3c9c9;
+
+    --me-linear-gradient: linear-gradient(135deg, var(--primary-color), #24f5ed);
+}
+
+.light-theme {
+  --surface-dark-color: #ffffff;
+  --surface-container-color: #f5f5f5;
+  --primary-color: #4a90e2;
+  --primary-content-color: #6bb5ff;
+  --text-color: #121212;
+  --me-linear-gradient: linear-gradient(135deg, #4a90e2, #8e44ad);
+}
+
+.nav-bar{
+    background-color: var(--surface-dark-color);
+    padding: 10px;
+    border-bottom: 1px solid var(--surface-container-color);
+    position: fixed;
+    background-color: var(--black);
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    gap: 20px; 
+}
+
+.nav-bar a{
+    padding: 10px;
+    font: var(--heading-font);
+    color: var(--text-color);
+    text-decoration:none;
+    font-weight: bold;
+    float: left;
+}
+
+.nav-bar a:hover{
+    background: var(--me-linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-bar span {
+    background: var(--me-linear-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font: var(--heading-font);
+    font-size: larger;
+    font-weight: 900;
+}

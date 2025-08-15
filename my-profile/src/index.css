@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--surface-dark-color);
+    color: #192e2f;
+    line-height: 1.6;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: var(--surface-container-color);
+}
+.hero-text {
+    max-width: 50%;
+}
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #0a5c5a;
+}
+.tagline {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.buttons .btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn.primary {
+    background: #0a5c5a;
+    color: white;
+}
+.btn.secondary {
+    background: white;
+    color: #0a5c5a;
+    border: 2px solid #0a5c5a;
+}
+.hero-img img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+section {
+    padding: 50px;
+}
+h2 {
+    color: #0a5c5a;
+    margin-bottom: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+.progress {
+    background: #ddd;
+    border-radius: 20px;
+    height: 10px;
+}
+.progress div {
+    background: #24f5ed;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+.project-list {
+    display: flex;
+    gap: 20px;
+}
+.project-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+}
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+.contact input, .contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.contact button {
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+}
