@@ -1,2 +1,4 @@
 # About me
-im J
+
+im Jerson Valdez
+
