@@ -1,5 +1,19 @@
-.home-page {
+.home-page-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
+    padding: 200px 150px;
+}
+
+.home-page-container .line{
+    width: 80%;
+    height: 2px;
+    background-color: var(--sf-dark);
+}
+
+@media (max-width: 768px) {
+    .home-page-container {
+        padding: 50px 20px;
+    }
 }

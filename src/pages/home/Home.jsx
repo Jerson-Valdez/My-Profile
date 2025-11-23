@@ -4,9 +4,10 @@ import './home.css'
 
 export default function Home() {
   return (
-    <div className='home-page'>
+    <main className='home-page-container'>
         <Intro />
+        <div className="line"></div>
         <About />
-    </div>
+    </main>
   )
 }

@@ -1,7 +1,7 @@
 .intro-container{
     position: relative;
-    padding: 200px 150px;
     min-height: fit-content;
+    width: 100%;
 }
 
 .intro-container .content{
@@ -148,7 +148,7 @@
 
 @media (max-width: 768px) {
     .intro-container{
-        padding: 100px 10px;
+        padding: 0px 10px;
     }
 
     .intro-container .content{
@@ -157,6 +157,7 @@
         align-items: center;
         text-align: center;
         margin-top: 100px;
+        padding: 10px;
     }
 
     .intro-container .content h1{
