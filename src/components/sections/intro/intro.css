@@ -1,0 +1,211 @@
+.intro-container{
+    position: relative;
+    padding: 200px 150px;
+    min-height: fit-content;
+}
+
+.intro-container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    position: absolute;
+    left: 100px;
+    bottom: 20px;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.intro-container .content h3{
+    font-family: var(--primary-font);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--fg-primary);
+}
+
+.intro-container .content h1{
+    font-family: var(--primary-font);
+    font-weight: 800;
+    font-size: 3.5rem;
+    text-align: left;
+}
+
+.intro-container .content p{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.intro-container .content .btn-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.intro-container .content .btn-container .view-work-btn{
+    flex: 1;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--fg-secondary);
+    background-image: linear-gradient(to right, var(--sf-dark), var(--sf-light));
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.intro-container .content .btn-container .view-work-btn:hover{
+    box-shadow: 0 0 10px var(--sf-light);
+    transform: translateY(-1px);
+}
+
+.intro-container .content .btn-container .get-in-touch-btn{
+    flex: 1;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--fg-secondary);
+    background-color: transparent;
+    border: 2px solid var(--sf-dark);
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.intro-container .quick-link{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.intro-container .quick-link a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--fg-primary);
+    background-color: color-mix(in srgb, var(--fg-primary), transparent 80%);
+    padding: 8px;
+    border-radius: 30px;
+    transition: 0.3s ease-out;
+}
+
+.intro-container .quick-link a:hover{
+    box-shadow: 0 0 10px var(--fg-primary);
+    transform: translateY(-1px);
+}
+
+.intro-container .gradient-box{
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 340px;
+    background: linear-gradient(to right, var(--bg-dark) 0%, var(--sf-dark) 100%);
+}
+
+.intro-container .gradient-box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 30px;
+    left: 30px;
+    border: 2px solid color-mix(in srgb, var(--sf-dark), transparent 50%);
+}
+
+.intro-container .gradient-box img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    filter: grayscale(100%);
+    transition: 0.3s ease-out;
+}
+
+.intro-container .gradient-box img:hover{
+    filter: none;
+    transform: scale(1.02);
+    transform: translateY(-1.2px);
+}
+
+@media (max-width: 768px) {
+    .intro-container{
+        padding: 100px 10px;
+    }
+
+    .intro-container .content{
+        position: static;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .intro-container .content h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .intro-container .content h3{
+        font-size: 1.2rem;
+    }
+
+    .intro-container .content p{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .intro-container .gradient-box{
+        height: auto;
+        width: 100%;
+    }
+
+    .intro-container .gradient-box::before{
+        top: 20px;
+        left: 0px;
+    }
+
+    .intro-container .gradient-box img{
+        width: 30%;
+        height: auto;
+    }
+}
+
+.intro-container .float{
+    position: absolute; 
+    top: 15%;
+    right: 10%;
+    opacity: 0.8;
+}
+
+.intro-container .float:nth-child(2){
+    top: 10%;
+    right: 40%;
+    width: 50px;
+    height: 50px;
+}
+
+.intro-container .float:nth-child(3){
+    top: 53%;
+    left: 60%;
+    width: 40px;
+    height: 40px;
+}
