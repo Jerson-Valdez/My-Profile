@@ -142,9 +142,8 @@
 
 .intro-container .gradient-box img:hover{
     filter: none;
-    transform: scale(1.02);
-    transform: translateY(-1.2px);
-}
+    transform: scale(1.01) translateY(-2.2px);
+    }
 
 @media (max-width: 768px) {
     .intro-container{
@@ -181,7 +180,7 @@
 
     .intro-container .gradient-box::before{
         top: 20px;
-        left: 0px;
+        left: 20px;
     }
 
     .intro-container .gradient-box img{

@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
-    padding: 200px 150px;
+    gap: 100px;
+    padding: 200px 10%;
 }
 
 .home-page-container .line{
-    width: 80%;
+    width: 90%;
     height: 2px;
-    background-color: var(--sf-dark);
+    background: linear-gradient(to right, transparent, var(--sf-dark), transparent);
 }
 
 @media (max-width: 768px) {

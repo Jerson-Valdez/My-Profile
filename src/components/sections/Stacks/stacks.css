@@ -1,0 +1,72 @@
+.stacks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.stacks-container .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.stacks-container .header .title{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.stacks-container .header .title h2:nth-child(2){
+    color: var(--fg-primary);
+}
+
+.stacks-container .header p{
+    text-align: center;
+}
+
+.stacks-container .header p:nth-child(3){
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.stacks-container .architecture-component{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.stacks-container .arch-list{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.stacks-container .tech-video{
+    width: 40px;
+    margin-left: -10px;
+}
+
+.stacks-container .all-stacks-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    gap: 20px;
+    position: relative;
+}

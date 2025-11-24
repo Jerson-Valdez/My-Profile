@@ -1,0 +1,39 @@
+.stack-category{
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: fit-content;
+    background: color-mix(in srgb, var(--bg-dark-alt), transparent 80%);
+    transition: 0.3s ease-out;
+}
+
+.stack-category .stack-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.stack-category .stack-items .stack-item img{
+    height: 35px;
+    width: 35px;
+    filter: grayscale(100%);
+}
+
+.stack-category:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px var(--sf-dark);
+    transition: 0.3s ease-out;
+}
+
+.stack-category:hover .stack-items .stack-item img{
+    filter: none;
+    transition: 0.3s ease-out;
+}
+
