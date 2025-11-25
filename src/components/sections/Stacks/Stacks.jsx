@@ -19,58 +19,10 @@ import ArchItem from '../../cards/arch item/ArchItem';
 import tech from '../../../assets/float/tech.webm';
 import StackCategory from '../../cards/stack category/StackCategory';
 
+import archStacks from '../../../datas/archstacks.json';
+import allStacks from '../../../datas/allstacks.json';
+
 export default function Stacks() {
-    const archStacks = [
-        {label: 'Library', value: 'React.js', icon: reactjs},
-        {label: 'Structure', value: 'HTML5', icon: html5},
-        {label: 'Styling', value: 'CSS 3', icon: css3},
-        {label: 'JRE', value: 'Node.js', icon: nodejs},
-        {label: 'Deploy', value: 'Vercel', icon: vercel},
-    ]
-
-    const allStacks = [
-        {label: 'Front-end', 
-            stack: [
-                {value: 'React.js', icon: reactjs},
-                {value: 'HTML5', icon: html5},
-                {value: 'CSS 3', icon: css3},
-                {value: 'Vite.js', icon: vite},
-                {value: 'Figma', icon: figma},
-                {value: 'JavaScript', icon: javascript}
-            ]
-        },
-        {label: 'Back-end', 
-            stack: [
-                {value: 'Node.js', icon: nodejs},
-                {value: 'Java', icon: java},
-                {value: 'PHP', icon: php},
-            ]
-        },
-        {label: 'Database', 
-            stack: [
-                {value: 'MySQL', icon: mysql},      
-                {value: 'Firebase', icon: firebase},      
-            ]
-        },
-        {label: 'Version Control', 
-            stack: [
-                {value: 'Git', icon: git},
-                {value: 'GitHub', icon: github},
-            ]
-        },
-        {label: 'Deployment & Hosting', 
-            stack: [
-                {value: 'Vercel', icon: vercel},
-                {value: 'Infinity Free', icon: infinityFree},
-            ]
-        },
-        {label: 'Mobile Development', 
-            stack: [
-                {value: 'Android', icon: android},
-            ]
-        }
-    ];
-
     return(
         <section className="stacks-container" id='skills'>
             <div className="header">
@@ -87,7 +39,7 @@ export default function Stacks() {
             <div className="architecture-component">    
                 
                 <div className="arch-list" data-aos="fade-right" data-aos-duration="1000">
-                    {archStacks.reverse().map((stack, index) => (
+                    {archStacks.map((stack, index) => (
                         <ArchItem 
                         key={index}
                         label={stack.label} 

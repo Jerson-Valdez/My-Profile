@@ -1,0 +1,43 @@
+[
+    {"label": "Front-end", 
+        "stack": [
+            {"value": "React.js", "icon": "src/assets/stacks/react.svg"},
+            {"value": "HTML5", "icon": "src/assets/stacks/html5.svg"},
+            {"value": "CSS 3", "icon": "src/assets/stacks/css3.svg"},
+            {"value": "Vite.js", "icon": "src/assets/stacks/vitejs.svg"},
+            {"value": "Figma", "icon": "src/assets/stacks/figma.svg"},
+            {"value": "JavaScript", "icon": "src/assets/stacks/js.svg"}
+        ]
+    },
+    {"label": "Back-end", 
+        "stack": [
+            {"value": "Node.js", "icon": "src/assets/stacks/nodejs.svg"},
+            {"value": "Java", "icon": "src/assets/stacks/java.svg"},
+            {"value": "PHP", "icon": "src/assets/stacks/php.svg"}
+        ]
+    },
+    {"label": "Database", 
+        "stack": [
+            {"value": "MySQL", "icon": "src/assets/stacks/mysql.svg"},      
+            {"value": "Firebase", "icon": "src/assets/stacks/firebase.svg"},
+            {"value": "MS SQL", "icon": "src/assets/stacks/mssql.svg"}    
+        ]
+    },
+    {"label": "Version Control", 
+        "stack": [
+            {"value": "Git", "icon": "src/assets/stacks/git.svg"},
+            {"value": "GitHub", "icon": "src/assets/stacks/github.svg"}
+        ]
+    },
+    {"label": "Deployment & Hosting", 
+        "stack": [
+            {"value": "Vercel", "icon": "src/assets/stacks/vercel.svg"},
+            {"value": "Infinity Free", "icon": "src/assets/stacks/infinityFree.svg"}
+        ]
+    },
+    {"label": "Mobile Development", 
+        "stack": [
+            {"value": "Android", "icon": "src/assets/stacks/android.svg "}
+        ]
+    }
+]

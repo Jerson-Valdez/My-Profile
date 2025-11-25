@@ -26,10 +26,10 @@ export default function Nav() {
 
     return (
         <nav className='nav-container' data-aos="fade-down">
-            <div className="logo">
+            <Link to={'intro'} className="logo">
                 <img src={logo} alt="Jerson Valdez Logo" className='nav-logo'/>
                 <span className='nav-logo'>jv.</span>
-            </div>
+            </Link>
             <ul id='links'>
                 {navLink.map((link, i) =>{
                     return (

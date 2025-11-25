@@ -9,7 +9,10 @@ export default function StackCategory({label, stack}) {
                         return (
                             <div className="stack-item" 
                                 key={i}>
-                                <img src={stackItem.icon} alt={stackItem.value} title={stackItem.value}/>
+                                <img 
+                                    src={stackItem.icon} 
+                                    alt={stackItem.value} 
+                                    title={stackItem.value}/>
                             </div>
                         )
                     }

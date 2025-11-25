@@ -1,0 +1,113 @@
+.achievement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.achievement-container .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.achievement-container .header .title{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.achievement-container .header .title h2:nth-child(1){
+    color: var(--fg-primary);
+}
+
+.achievement-container .header p{
+    text-align: center;
+}
+
+.achievement-container .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 50px;
+    width: 850px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 20px; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.achievement-container .content::-webkit-scrollbar {
+  display: none;
+}
+
+.achievement-container .carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120%;
+    position: absolute;
+    top: 58%;
+}
+
+.achievement-container .carousel-btn {
+    background-color: color-mix(in srgb, var(--bg-dark) 80%, transparent 50%);
+    color: var(--fg-primary);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-dark-alt);
+    transition: 0.3s ease-out;
+}
+
+.achievement-container .carousel-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--sf-dark);
+    color: var(--bg-dark);
+    transition: 0.3s ease-out;
+}
+
+.achievement-container .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.achievement-container .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    background-color: var(--fg-secondary);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.achievement-container .dot.active {
+    background-color: var(--sf-light);
+}
+
+@media (max-width: 768px) {
+    .achievement-container .content{
+        width: 350px;
+        gap: 30px;   
+    }
+
+    .achievement-container .carousel-controls {
+        width: 100%;
+        top: 50%;
+    }
+}

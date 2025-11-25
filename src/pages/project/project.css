@@ -1,0 +1,184 @@
+.project-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 50px 10%;
+}
+
+.project-page-container .back-btn{
+    text-decoration: none;
+    color: var(--fg-secondary);
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: fit-content;
+    margin-bottom: 50px;
+    transition: 0.3s ease-out;
+}
+
+.project-page-container .back-btn:hover{
+    box-shadow: 0 0 10px var(--sf-light);
+    transform: translateY(-1px);
+    background: linear-gradient(to right, var(--sf-dark), var(--sf-light));
+    transition: 0.3s ease-out;
+}
+
+.project-page-container .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 50%);
+    border-radius: 20px;
+}
+
+.project-page-container .header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.project-page-container .header h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.project-page-container .header p{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid var(--sf-dark);
+    background-color: color-mix(in srgb, var(--sf-light) 10%, transparent 90%);
+}
+
+.project-page-container .content img{
+    width: 100%;
+    aspect-ratio: 16/7;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.project-page-container .content .tech-stacks, 
+.project-page-container .content .overview,
+.project-page-container .content .features,
+.project-page-container .content .problem-solution{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 50%);
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 2px solid var(--bg-dark-alt);
+}
+
+.project-page-container .content .row{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.project-page-container .content .row .row-box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    min-width: 200px;
+    background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 50%);
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 2px solid var(--bg-dark-alt);
+}
+
+.project-page-container .row-box h6{
+    color: var(--sf-light);
+    font-size: 1rem;
+}
+
+.project-page-container .stacks-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-page-container .tech-stacks .stack-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-page-container .tech-stacks .stack-item img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.project-page-container .features ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project-page-container .features ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--fg-secondary);
+}
+
+.project-page-container .features ul li::before {
+    content: '•';
+    color: var(--sf-dark);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.project-page-container .actions{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.project-page-container .actions a{
+    flex: 1;
+    text-decoration: none;
+    color: var(--fg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid var(--sf-dark);
+    background-color: color-mix(in srgb, var(--sf-dark), transparent 80%);
+    transition: 0.3s ease-out;
+}
+
+.project-page-container .actions a:hover{
+    box-shadow: 0 0 10px var(--sf-dark);
+    transform: translateY(-1px);
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+    .project-page-container {
+        padding: 100px 20px;
+    }
+}

@@ -1,0 +1,39 @@
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.projects-container .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.projects-container .header .title{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.projects-container .header .title h2:nth-child(1){
+    color: var(--fg-primary);
+}
+
+.projects-container .header p{
+    text-align: center;
+}
+
+.projects-container .content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+}

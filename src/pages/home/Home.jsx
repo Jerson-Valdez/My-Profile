@@ -1,5 +1,7 @@
 import About from '../../components/sections/about me/About'
+import Achievement from '../../components/sections/achievements/Achievement'
 import Intro from '../../components/sections/intro/Intro'
+import Projects from '../../components/sections/projects/Projects'
 import Stacks from '../../components/sections/Stacks/Stacks'
 import './home.css'
 
@@ -10,6 +12,8 @@ export default function Home() {
         <div className="line"></div>
         <About />
         <Stacks />
+        <Projects />
+        <Achievement />
     </main>
   )
 }

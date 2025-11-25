@@ -1,0 +1,94 @@
+.achievement-card-container{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s ease-out;
+    scroll-snap-align: start;
+    background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 90%);
+}
+
+.achievement-card-container img{
+    flex: 1;
+    width: 400px;
+    border-radius: 20px;
+    height: auto;
+    object-fit: cover;
+}
+
+.achievement-card-container .achievement-info{
+    flex: 1;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achievement-card-container .achievement-info .head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.achievement-card-container .achievement-info .head h3{
+    font-family: var(--primary-font);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--fg-primary);
+}
+
+.achievement-card-container .achievement-info .head span{
+    max-width: fit-content;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 2px solid var(--sf-dark);
+    background-color: color-mix(in srgb, var(--sf-light) 10%, transparent 90%);
+}
+
+.achievement-card-container .date-location{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--fg-secondary);
+}
+
+.achievement-card-container .achievement-info p{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px){
+    .achievement-card-container{
+        flex-direction: column;
+    }
+
+    .achievement-card-container .achievement-info .head{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .achievement-card-container .achievement-info .head h3{
+        font-size: 1rem;
+    }
+
+    .achievement-card-container img, .achievement-card-container .achievement-info{
+        width: 350px;
+        height: auto;
+    }
+}
