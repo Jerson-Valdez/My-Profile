@@ -97,7 +97,7 @@
 }
 
 .achievement-container .dot.active {
-    background-color: var(--sf-light);
+    background-color: var(--sf-dark);
 }
 
 @media (max-width: 768px) {

@@ -26,7 +26,12 @@ export default function Nav() {
 
     return (
         <nav className='nav-container' data-aos="fade-down">
-            <Link to={'intro'} className="logo">
+            <Link 
+                to={'intro'} 
+                smooth={true} 
+                duration={500} 
+                spy={true}
+                className="logo">
                 <img src={logo} alt="Jerson Valdez Logo" className='nav-logo'/>
                 <span className='nav-logo'>jv.</span>
             </Link>

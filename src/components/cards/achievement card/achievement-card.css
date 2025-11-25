@@ -17,6 +17,7 @@
     border-radius: 20px;
     height: auto;
     object-fit: cover;
+    filter: grayscale(100%);
 }
 
 .achievement-card-container .achievement-info{
@@ -69,6 +70,12 @@
     font-weight: 400;
     font-size: 0.8rem;
     line-height: 1.5;
+}
+
+.achievement-card-container:hover img{
+    filter: grayscale(0%);
+    transform: scale(1.01);
+    transition: 0.5s ease-out;
 }
 
 @media (max-width: 768px){
