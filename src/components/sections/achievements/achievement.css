@@ -4,7 +4,6 @@
     align-items: center;
     gap: 50px;
     position: relative;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -108,6 +107,9 @@
 }
 
 @media (max-width: 768px) {
+    .achievement-container{
+        overflow: hidden;
+    }
     .achievement-container .content{
         width: 350px;
         gap: 30px;   

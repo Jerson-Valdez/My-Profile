@@ -8,7 +8,6 @@
     background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 80%);
     gap: 20px;
     position: relative;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -78,6 +77,9 @@
 }
 
 @media (max-width: 768px) {
+    .about-container{
+        overflow: hidden;
+    }
     .about-container .img-container{
         width: 100%;
     }
