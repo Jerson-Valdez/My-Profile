@@ -44,7 +44,7 @@ export default function Stacks() {
                         <ArchItem 
                         key={index}
                         label={stack.label} 
-                        icon={initialSrc + stack.icon} 
+                        icon={stack.icon} 
                         value={stack.value} 
                         />
                     ))} 
