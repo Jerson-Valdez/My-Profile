@@ -4,6 +4,8 @@
     align-items: center;
     gap: 50px;
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .projects-container .header {

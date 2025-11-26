@@ -4,6 +4,8 @@
     align-items: center;
     gap: 50px;
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .stacks-container .header {
@@ -69,4 +71,9 @@
     width: 60%;
     gap: 20px;
     position: relative;
+}
+.stacks-container > p{
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
 }

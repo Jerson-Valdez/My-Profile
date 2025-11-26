@@ -7,10 +7,11 @@
     justify-content: space-between;
     height: 75px;
     position: fixed;
-    width: calc(100% - 300px);
+    width: 100%;
     padding: 0px 150px;
     border-radius: 0px 0px 15px 15px;
     z-index: 9998;
+    box-sizing: border-box;
 }
 
 .nav-container .logo{
@@ -149,7 +150,7 @@
 
 @media (max-width: 768px) {
     .nav-container {
-        width: calc(100% - 40px);
+        width: 100%;
         padding: 0px 20px;
     }
 

@@ -4,6 +4,8 @@
     align-items: center;
     gap: 50px;
     position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .achievement-container .header {
@@ -16,6 +18,9 @@
 .achievement-container .header .title{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
     font-weight: 800;
     font-size: 1.5rem;
@@ -55,6 +60,8 @@
     width: 120%;
     position: absolute;
     top: 58%;
+    z-index: 5;
+    box-sizing: border-box;
 }
 
 .achievement-container .carousel-btn {

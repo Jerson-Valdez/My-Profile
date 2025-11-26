@@ -7,7 +7,7 @@ import star from '/assets/float/star.svg'
 
 export default function Intro() {
   return (
-    <section className="intro-container" id='intro' data-aos="fade-up">
+    <section className="intro-container" id='intro' data-aos="fade-up" data-aos-duration="1000">
       <div className="gradient-box">
         <div className="content">
           <h3>FULL STACK DEVELOPER</h3>
