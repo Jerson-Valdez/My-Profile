@@ -1,7 +1,7 @@
 [
-    {"label": "Deploy", "value": "Vercel", "icon": "src/assets/stacks/vercel.svg"},
-    {"label": "JRE", "value": "Node.js", "icon": "src/assets/stacks/nodejs.svg"},
-    {"label": "Styling", "value": "CSS 3", "icon": "src/assets/stacks/css3.svg"},
-    {"label": "Structure", "value": "HTML5", "icon": "src/assets/stacks/html5.svg"},
-    {"label": "Library", "value": "React.js", "icon": "src/assets/stacks/react.svg"}
+    {"label": "Deploy", "value": "Vercel", "icon": "/jerson-valdez.vercel.app/src/assets/stacks/vercel.svg"},
+    {"label": "JRE", "value": "Node.js", "icon": "/jerson-valdez.vercel.app/src/assets/stacks/nodejs.svg"},
+    {"label": "Styling", "value": "CSS 3", "icon": "/jerson-valdez.vercel.app/src/assets/stacks/css3.svg"},
+    {"label": "Structure", "value": "HTML5", "icon": "/jerson-valdez.vercel.app/src/assets/stacks/html5.svg"},
+    {"label": "Library", "value": "React.js", "icon": "/jerson-valdez.vercel.app/src/assets/stacks/react.svg"}
 ]

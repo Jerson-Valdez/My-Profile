@@ -24,8 +24,6 @@ import allStacks from '../../../datas/allstacks.json';
 
 export default function Stacks() {
 
-    const initialSrc = '../../';
-
     return(
         <section className="stacks-container" id='skills'>
             <div className="header">
