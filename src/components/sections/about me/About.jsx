@@ -1,6 +1,6 @@
 import './about.css'
-import jersonImage from '../../../assets/me/jerson-about.jpg'
-import star from '../../../assets/float/star.svg'
+import jersonImage from '/assets/me/jerson-about.jpg'
+import star from '/assets/float/star.svg'
 
 export default function About() {
     const aboutData = [
