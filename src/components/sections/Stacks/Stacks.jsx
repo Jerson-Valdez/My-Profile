@@ -23,6 +23,9 @@ import archStacks from '../../../datas/archstacks.json';
 import allStacks from '../../../datas/allstacks.json';
 
 export default function Stacks() {
+
+    const initialSrc = '../../';
+
     return(
         <section className="stacks-container" id='skills'>
             <div className="header">
@@ -43,7 +46,7 @@ export default function Stacks() {
                         <ArchItem 
                         key={index}
                         label={stack.label} 
-                        icon={stack.icon} 
+                        icon={initialSrc + stack.icon} 
                         value={stack.value} 
                         />
                     ))} 
