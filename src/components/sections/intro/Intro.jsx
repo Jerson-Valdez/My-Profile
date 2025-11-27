@@ -1,9 +1,5 @@
 import { Link } from 'react-scroll'
 import './intro.css'
-import jersonImage from '/assets/me/jerson-intro.png'
-import circleDark from '/assets/float/circle-dark.svg'
-import circlePurple from '/assets/float/circle-purple.svg'
-import star from '/assets/float/star.svg'
 
 export default function Intro() {
   return (
@@ -34,11 +30,8 @@ export default function Intro() {
           </div>
         </div>
         
-        <img src={jersonImage} alt="Jerson Patrick Valdez"/>
+        <img src="/assets/me/jerson-intro.png" alt="Jerson Patrick Valdez"/>
       </div>
-      <img className='float' src={circleDark} alt="" />
-      <img className='float' src={circlePurple} alt="" />
-      <img className='float' src={star} alt="" />
     </section>
   )
 }

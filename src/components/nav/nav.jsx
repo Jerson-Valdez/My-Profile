@@ -1,6 +1,5 @@
 import { Link } from 'react-scroll'
 import './nav.css'
-import logo from '../../../public/logo.svg'
 import { useState } from 'react'
 
 export default function Nav() {
@@ -32,7 +31,7 @@ export default function Nav() {
                 duration={500} 
                 spy={true}
                 className="logo">
-                <img src={logo} alt="Jerson Valdez Logo" className='nav-logo'/>
+                <img src="/logo.svg" alt="Jerson Valdez Logo" className='nav-logo'/>
                 <span className='nav-logo'>jv.</span>
             </Link>
             <ul id='links'>

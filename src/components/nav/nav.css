@@ -110,13 +110,10 @@
 }
 
 .nav-container .contact-btn {
-    font-family: var(--secondary-font);
     font-weight: 500;
     font-size: 1rem;
     cursor: pointer;
-    text-decoration: none;
     background-image: linear-gradient(to right, var(--sf-dark), var(--sf-light));
-    color: var(--fg-secondary);
     border-radius: 12px;
     padding: 10px 25px;
     animation: contactLight 3s infinite;

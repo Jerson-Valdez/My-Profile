@@ -1,6 +1,4 @@
 import './about.css'
-import jersonImage from '/assets/me/jerson-about.jpg'
-import star from '/assets/float/star.svg'
 
 export default function About() {
     const aboutData = [
@@ -11,9 +9,8 @@ export default function About() {
 
     return (
         <section className="about-container" id='about' data-aos="fade-up" data-aos-duration="1000"> 
-            <img className='float' src={star} alt=""/>
             <div className="img-container" data-aos="fade-right" data-aos-duration="1000">
-                <img className='me' src={jersonImage} alt="Jerson" />
+                <img className='me' src="assets/me/jerson-about.jpg" alt="Jerson" />
             </div>
             <div className="content" data-aos="fade-left" data-aos-duration="1000">
                 <div className="about-header">
