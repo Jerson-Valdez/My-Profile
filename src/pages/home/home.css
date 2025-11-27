@@ -9,7 +9,7 @@
 .home-page-container .line{
     width: 90%;
     height: 2px;
-    background: linear-gradient(to right, transparent, var(--sf-dark), transparent);
+    background: linear-gradient(to right, transparent, var(--bg-dark-alt), transparent);
 }
 
 @media (max-width: 768px) {
