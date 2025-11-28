@@ -1,14 +1,14 @@
 .nav-container {
-    background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 20%);
-    border: 1px solid var(--bg-dark-alt);
+    background-color: color-mix(in srgb, var(--bg-color-alt), transparent 50%);
+    border: 1px solid var(--bg-color-alt);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 75px;
+    height: 70px;
     position: fixed;
     width: 100%;
-    padding: 0px 150px;
+    padding: 0px 10%;
     border-radius: 0px 0px 15px 15px;
     z-index: 9998;
     box-sizing: border-box;
@@ -50,8 +50,8 @@
 
 .nav-container ul .nav-link {
     font-family: var(--secondary-font);
-    font-weight: 500;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
     color: var(--fg-secondary);
     cursor: pointer;
     position: relative;
@@ -94,27 +94,43 @@
     gap: 20px;
 }
 
-.nav-container .ti.ti-sun {
-    background-color: color-mix(in srgb, var(--sf-dark), transparent 80%);
-    padding: 5px;
-    font-size: 2rem;
-    color: var(--sf-light);
-    border-radius: 12px;
-    cursor: pointer;
+.nav-container .theme-icon {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color-alt);
+    border-radius: 20px;
+    padding: 3px 5px;
+    width: 45px;
 }
 
-.nav-container .ti.ti-sun:hover {
-    transition: 0.3s ease-out;
+.nav-container .theme-icon.dark i {
+    transform: translateX(20px);
+}
+
+.nav-container .theme-icon:hover {
+    cursor: pointer;
     box-shadow: 0 0 10px var(--sf-dark);
     transform: translateY(-1px);
+    transition: 0.3s ease-out;
+}
+
+.nav-container .theme-icon i {
+    font-size: 0.9rem;
+    color: var(--btn-fg-color);
+    background-color: color-mix(in srgb, var(--sf-dark), transparent 20%);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
 }
 
 .nav-container .contact-btn {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     background-image: linear-gradient(to right, var(--sf-dark), var(--sf-light));
     border-radius: 12px;
+    color: var(--btn-fg-color);
     padding: 10px 25px;
     animation: contactLight 3s infinite;
     transition: 0.5s ease;
@@ -164,7 +180,7 @@
         padding: 100px 20px;
         height: 100vh;
         flex-direction: column;
-        background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 10%);
+        background-color: color-mix(in srgb, var(--bg-color-alt), transparent 10%);
         z-index: -1;
     }
 

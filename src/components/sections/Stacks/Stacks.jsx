@@ -2,7 +2,6 @@ import './stacks.css';
 import ArchItem from '../../cards/arch item/ArchItem';
 import tech from '/assets/float/tech.webm';
 import StackCategory from '../../cards/stack category/StackCategory';
-
 import archStacks from '../../../datas/archstacks.json';
 import allStacks from '../../../datas/allstacks.json';
 
