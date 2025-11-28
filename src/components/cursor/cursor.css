@@ -1,0 +1,42 @@
+.custom-cursor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.custom-cursor .cursor-circle {
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-cursor .cursor-circle-outer {
+    width: 40px;
+    height: 40px;
+    background-color: color-mix(in srgb, var(--sf-dark),transparent 80%);
+    transition: transform 0.15s ease-out, background-color 0.3s ease-out;
+}
+
+.custom-cursor .cursor-circle-inner {
+    width: 10px;
+    height: 10px;
+    background-color: var(--sf-dark);
+}
+
+.custom-cursor.active .cursor-circle-outer{
+    background-color: color-mix(in srgb, var(--sf-light),transparent 80%);
+    transition: background-color 0.3s ease-out;
+}
+
+.custom-cursor.active .cursor-circle-inner{
+    background-color: var(--sf-light);
+    transition: background-color 0.3s ease-out;
+}
