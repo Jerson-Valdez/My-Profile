@@ -7,21 +7,21 @@
 
 .project-page-container .back-btn{
     text-decoration: none;
-    color: var(--fg-secondary);
+    color: var(--btn-fg-color);
+    background: linear-gradient(to right, var(--sf-dark), var(--sf-light));
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 12px;
     width: fit-content;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     transition: 0.3s ease-out;
 }
 
 .project-page-container .back-btn:hover{
     box-shadow: 0 0 10px var(--sf-light);
     transform: translateY(-1px);
-    background: linear-gradient(to right, var(--sf-dark), var(--sf-light));
     transition: 0.3s ease-out;
 }
 
@@ -179,6 +179,6 @@
 
 @media (max-width: 768px) {
     .project-page-container {
-        padding: 100px 20px;
+        padding: 50px 10px;
     }
 }
