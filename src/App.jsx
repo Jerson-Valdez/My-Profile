@@ -5,6 +5,7 @@ import Nav from './components/nav/nav'
 import Project from './pages/project/Project'
 import { ToastContainer } from 'react-toastify'
 import Footer from './components/footer/Footer';
+import Cursor from './components/cursor/Cursor';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function AppWrapper() {
         {!hideNav && (
           <Footer />
         )}
+        <Cursor />
     </>
   )
 }

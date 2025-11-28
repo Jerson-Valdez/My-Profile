@@ -1,10 +1,11 @@
 .nav-container {
-    background-color: color-mix(in srgb, var(--bg-color-alt), transparent 50%);
+    background-color: color-mix(in srgb, var(--bg-color-alt), transparent 80%);
     border: 1px solid var(--bg-color-alt);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    backdrop-filter: blur(10px);
     height: 70px;
     position: fixed;
     width: 100%;
