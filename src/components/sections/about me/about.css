@@ -5,7 +5,7 @@
     align-items: start;
     flex-wrap: wrap;
     padding: 25px;
-    background-color: color-mix(in srgb, var(--bg-dark-alt), transparent 80%);
+    background-color: color-mix(in srgb, var(--bg-color-alt), transparent 80%);
     gap: 20px;
     position: relative;
     box-sizing: border-box;

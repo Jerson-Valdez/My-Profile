@@ -64,7 +64,7 @@
 }
 
 .achievement-container .carousel-btn {
-    background-color: color-mix(in srgb, var(--bg-dark) 80%, transparent 50%);
+    background-color: color-mix(in srgb, var(--bg-color) 80%, transparent 50%);
     color: var(--fg-primary);
     border: none;
     border-radius: 50%;
@@ -75,14 +75,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--bg-dark-alt);
+    border: 2px solid var(--bg-color-alt);
     transition: 0.3s ease-out;
 }
 
 .achievement-container .carousel-btn:hover {
     transform: translateY(-2px);
     background-color: var(--sf-dark);
-    color: var(--bg-dark);
+    color: var(--bg-color);
     transition: 0.3s ease-out;
 }
 
