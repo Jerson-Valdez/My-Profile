@@ -134,7 +134,20 @@
     position: absolute;
     margin-top: 45px;
     width: 90%;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
     height: 6px;
     background-color: var(--random-color, var(--bg-color-alt));
     border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+    .stacks-container .all-stacks-container{
+        width: 80%;
+    }
+
+    .stacks-container .selected-categories{
+        width: 80%;
+    }
 }
