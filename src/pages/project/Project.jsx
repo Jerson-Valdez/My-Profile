@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 export default function Project() {
     const projectID = useParams()
     const [projectData, setProjectData] = useState(null);
-    const initialSrc = '../../';
 
     useEffect(()=>{
         setProjectData(projects.find(project => project.id == projectID.id));
@@ -23,7 +22,7 @@ export default function Project() {
                         <p>{projectData.category}</p>
                     </div>
                     <p>{projectData["sub-title"]}</p>
-                    <img src={initialSrc + projectData.image} alt={projectData.title} />
+                    <img src={projectData.image} alt={projectData.title} />
                     <div className="row">
                         <div className="row-box">
                             <h6><i className='ti ti-calendar-month'></i> Timeline</h6>
@@ -44,7 +43,7 @@ export default function Project() {
                             {projectData["tech-stacks"].map((stack, index) => (
                                 <div className="stack-item" key={index}>
                                     <img 
-                                        src={initialSrc + stack.icon} 
+                                        src={stack.icon} 
                                         alt={stack.label}
                                         title={stack.label}/>
                                     <h4>{stack.label}</h4>
