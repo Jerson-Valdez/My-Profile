@@ -1,8 +1,14 @@
 const projectsImages = import.meta.glob('../assets/projects/*.{png,jpg,jpeg,webp}', { eager: true });
+const allStacksImage = import.meta.glob('../assets/stacks/*.{svg,png,jpg,jpeg,webp}', { eager: true });
 
 const getImagePath = (filename) => {
     const path = `../assets/projects/${filename}`;
     return projectsImages[path]?.default || null;
+}
+
+const getStackIconPath = (filename) => {
+    const path = `../assets/stacks/${filename}`;
+    return allStacksImage[path]?.default || null;
 }
 
 export const projects = [
@@ -16,8 +22,8 @@ export const projects = [
         "time-line": 3,
         "my-role": "Frontend Developer",
         "tech-stacks":[
-            {"label": "Java", "icon": getImagePath('java.svg')},
-            {"label": "MS SQL", "icon": getImagePath('mssql.svg')}
+            {"label": "Java", "icon": getStackIconPath('java.svg')},
+            {"label": "MS SQL", "icon": getStackIconPath('mssql.svg')}
         ],
         "overview": "Mommy's Variety Store Management System is a desktop application built with Java Swing for the graphical user interface (GUI) and Microsoft SQL Server as the primary database. The application is designed to manage inventory, categories, and other store-related operations. It also supports a legacy connection to Microsoft Access for backward compatibility with earlier database versions. This project is developed as part of a BSIT (Bachelor of Science in Information Technology) course requirement.",
         "features": [
@@ -44,11 +50,11 @@ export const projects = [
         "time-line": 3,
         "my-role": "Full Stack Developer",
         "tech-stacks":[
-            {"label": "PHP", "icon": getImagePath('php.svg')},
-            {"label": "Javascript", "icon": getImagePath('js.svg')},
-            {"label": "HTML5", "icon": getImagePath('html5.svg')},
-            {"label": "CSS3", "icon": getImagePath('css3.svg')},
-            {"label": "My SQL", "icon": getImagePath('mysql.svg')}
+            {"label": "PHP", "icon": getStackIconPath('php.svg')},
+            {"label": "Javascript", "icon": getStackIconPath('js.svg')},
+            {"label": "HTML5", "icon": getStackIconPath('html5.svg')},
+            {"label": "CSS3", "icon": getStackIconPath('css3.svg')},
+            {"label": "My SQL", "icon": getStackIconPath('mysql.svg')}
         ],
         "overview": "An individual project Online Account Receivables (OAR) System for a Multi-Purpose Cooperative during my 2nd Year on Web System Technologies subject. This system streamlines the management of cooperative accounts, transactions, and financial records, enhancing efficiency and transparency.",
         "features": [
@@ -74,11 +80,11 @@ export const projects = [
         "time-line": 2,
         "my-role": "Full Stack Developer",
         "tech-stacks":[
-            {"label": "React", "icon": getImagePath('react.svg')},
-            {"label": "Javascript", "icon": getImagePath('js.svg')},
-            {"label": "HTML5", "icon": getImagePath('html5.svg')},
-            {"label": "CSS3", "icon": getImagePath('css3.svg')},
-            {"label": "Firebase", "icon": getImagePath('firebase.svg')}
+            {"label": "React", "icon": getStackIconPath('react.svg')},
+            {"label": "Javascript", "icon": getStackIconPath('js.svg')},
+            {"label": "HTML5", "icon": getStackIconPath('html5.svg')},
+            {"label": "CSS3", "icon": getStackIconPath('css3.svg')},
+            {"label": "Firebase", "icon": getStackIconPath('firebase.svg')}
         ],
         "overview": "Labable is a comprehensive laundry management ecosystem designed to modernize operations for small-to-medium businesses near university campuses. Integrating both Transaction Processing (TPS) and Management Information Systems (MIS), the platform bridges the gap between service providers and customers. It features a cross-platform mobile app for students to schedule and track services, alongside a web-based administration dashboard for owners to manage orders, automate payments, and analyze financial performance.",
         "features": [
