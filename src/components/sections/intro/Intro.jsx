@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll'
 import './intro.css'
+import me from '../../../assets/me/jerson-intro.png'
 
 export default function Intro() {
   return (
@@ -30,7 +31,7 @@ export default function Intro() {
           </div>
         </div>
         
-        <img src="/assets/me/jerson-intro.png" alt="Jerson Patrick Valdez"/>
+        <img src={me} alt="Jerson Patrick Valdez"/>
       </div>
     </section>
   )

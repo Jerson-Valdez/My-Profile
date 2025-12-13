@@ -1,7 +1,0 @@
-[
-    {"label": "Deploy", "value": "Vercel", "icon": "/assets/stacks/vercel.svg"},
-    {"label": "JsRE", "value": "Node.js", "icon": "/assets/stacks/nodejs.svg"},
-    {"label": "Styling", "value": "CSS 3", "icon": "/assets/stacks/css3.svg"},
-    {"label": "Structure", "value": "HTML5", "icon": "/assets/stacks/html5.svg"},
-    {"label": "Library", "value": "React.js", "icon": "/assets/stacks/react.svg"}
-]

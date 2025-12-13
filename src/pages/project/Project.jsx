@@ -1,6 +1,6 @@
 import { useParams } from 'react-router';
 import './project.css';
-import projectsData from '../../datas/projects.json';
+import {projects} from '../../datas/projects.js';
 import { useEffect, useState } from 'react';
 
 export default function Project() {
@@ -9,7 +9,7 @@ export default function Project() {
     const initialSrc = '../../';
 
     useEffect(()=>{
-        setProjectData(projectsData.find(project => project.id == projectID.id));
+        setProjectData(projects.find(project => project.id == projectID.id));
     }, [projectID])
     return(
         <main className="project-page-container">
