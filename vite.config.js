@@ -44,8 +44,7 @@ export default defineConfig({
             }
         ],
       },
-      workbox: {
-        // Increase limit to 5MB (default is 2MB)
+      workbox: { //para magkasya yung mga 5mb files ng offline caching
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
       } 
     })
