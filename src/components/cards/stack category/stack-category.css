@@ -1,7 +1,7 @@
 .stack-category{
     flex: 1;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -9,6 +9,7 @@
     border-radius: 12px;
     max-width: fit-content;
     background: color-mix(in srgb, var(--bg-color-alt), transparent 80%);
+    cursor: pointer;
     transition: 0.3s ease-out;
 }
 
@@ -33,6 +34,17 @@
 }
 
 .stack-category:hover .stack-items .stack-item img{
+    filter: none;
+    transition: 0.3s ease-out;
+}
+
+.stack-category.active{
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px var(--sf-dark);
+    transition: 0.3s ease-out;
+}
+
+.stack-category.active .stack-items .stack-item img{
     filter: none;
     transition: 0.3s ease-out;
 }

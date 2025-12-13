@@ -1,6 +1,6 @@
 import './projects.css' 
 import ProjectCard from '../../cards/project card/ProjectCard'
-import projectsData from '../../../datas/projects.json'
+import { projects } from '../../../datas/projects.js'
 
 export default function Projects(){
     return(
@@ -16,7 +16,7 @@ export default function Projects(){
                 </p>
             </div>
             <div className="content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                {projectsData.map(project => (
+                {projects.map(project => (
                     <ProjectCard 
                         key={project.id}
                         id={project.id}

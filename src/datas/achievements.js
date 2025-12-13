@@ -1,11 +1,18 @@
-[
+const achievementImages = import.meta.glob('../assets/achievements/*.{png,jpg,jpeg,webp,svg}', { eager: true });
+
+const getImagePath = (filename) => {
+    const path = `../assets/achievements/${filename}`;
+    return achievementImages[path]?.default || null;
+}
+
+export const achievements = [
     {
         "title": "Deans Listers",
         "category": "Academic",
         "date": "May 2025",
         "where": "Bulacan State University (Main Campus)",
         "description": "Academic excellence recognized for achieving Dean's List award for \"First Year 2nd Sem and Second Year 1st Sem of year 2024\" at Bulacan State University.",
-        "image": "/assets/achievements/deanslist2025.jpg" 
+        "image": getImagePath('deanslist2025.jpg') 
     },
     {
         "title": "Agent Blazer Champion",
@@ -13,7 +20,7 @@
         "date": "September 2025",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Agent Blazer Champion Workshop' course through the SmartBridge Academy online at Bulacan State University. ",
-        "image": "/assets/achievements/agentblazer.png" 
+        "image": getImagePath('agentblazer.png') 
     },
     {
         "title": "Operating System Basics",
@@ -21,7 +28,7 @@
         "date": "March 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Operating Systems Basics' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/OperatingSystemBasics.png" 
+        "image": getImagePath('OperatingSystemBasics.png') 
     },
     {
         "title": "Network Support and Security",
@@ -29,7 +36,7 @@
         "date": "April 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Network Support and Security' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/NetworkSupportSecurity.png" 
+        "image": getImagePath('NetworkSupportSecurity.png') 
     },
     {
         "title": "Networking Device and Initial Configuration",
@@ -37,7 +44,7 @@
         "date": "February 2025",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Networking Device and Initial Configuration' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/NetworkDevice.png" 
+        "image": getImagePath('NetworkDevice.png') 
     },
     {
         "title": "Networking Basics",
@@ -45,7 +52,7 @@
         "date": "February 2025",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Networking Basics' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/NetworkBasics.png" 
+        "image": getImagePath('NetworkBasics.png') 
     },
     {
         "title": "Introduction to IOT and Digital Transformation",
@@ -53,7 +60,7 @@
         "date": "November 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Introduction to IOT and Digital Transformation' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/IntroductionIOT.png" 
+        "image": getImagePath('IntroductionIOT.png') 
     },
     {
         "title": "Getting Started with Cisco packet Tracer",
@@ -61,7 +68,7 @@
         "date": "December 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Getting Started with Cisco packet Tracer' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/GettingStarted.png" 
+        "image": getImagePath('GettingStarted.png') 
     },
     {
         "title": "Exploring Network with Cisco Packet Tracer",
@@ -69,7 +76,7 @@
         "date": "December 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Exploring Network with Cisco Packet Tracer' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/ExploringNetwork.png" 
+        "image": getImagePath('ExploringNetwork.png') 
     },
     {
         "title": "Exploring IOT with Cisco Packet Tracer",
@@ -77,7 +84,7 @@
         "date": "November 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Exploring IOT with Cisco Packet Tracer' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/ExploringIOT.png" 
+        "image": getImagePath('ExploringIOT.png') 
     },
     {
         "title": "Computer Hardware Basics",
@@ -85,6 +92,6 @@
         "date": "April 2024",
         "where": "Bulacan State University (Main Campus)",
         "description": "Recognized for completing the 'Computer Hardware Basics' course through the Cisco Networking Academy at Bulacan State University. ",
-        "image": "/assets/achievements/ComputerHardwareBasics.png" 
+        "image": getImagePath('ComputerHardwareBasics.png') 
     }
 ]

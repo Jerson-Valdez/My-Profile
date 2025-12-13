@@ -1,11 +1,36 @@
 import './stacks.css';
 import ArchItem from '../../cards/arch item/ArchItem';
-import tech from '/assets/float/tech.webm';
+import tech from '../../../assets/float/tech.webm';
 import StackCategory from '../../cards/stack category/StackCategory';
-import archStacks from '../../../datas/archstacks.json';
-import allStacks from '../../../datas/allstacks.json';
+import {archStacks} from '../../../datas/archstacks.js';
+import {allStacks} from '../../../datas/allstacks.js';
+import { useState, useEffect } from 'react';
 
 export default function Stacks() {
+    const [selectedCategories, setSelectedCategories] = useState([]);
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    useEffect(() => {
+        console.log('Selected Categories from parent:', selectedCategories);
+    }, [selectedCategories]);
+
+    function handleCategoryToggle(label) {
+        setSelectedCategories(prevSelected => {
+            if (prevSelected.includes(label)) {
+                return prevSelected.filter(item => item !== label);
+            } else {
+                return [...prevSelected, label];
+            }
+        });
+    }
 
     return(
         <section className="stacks-container" id='skills'>
@@ -41,10 +66,33 @@ export default function Stacks() {
                             key={idx}
                             label={category.label}
                             stack={category.stack}
+                            onToggle={handleCategoryToggle}
+                            isActive={selectedCategories.includes(category.label)}
                         />
                     )
                 })}
             </div>
+            {
+                selectedCategories.length > 0 && (
+                    <div className="selected-categories">
+                        <h2>Stacks Experience</h2>
+                        <div className="label">
+                            <h3>Stacks</h3>
+                            <h3>Years</h3>
+                        </div>
+                        <ul>
+                            {allStacks.filter(category => selectedCategories.includes(category.label)).map((category, index) => (
+                                category.stack.map((stackItem, i) => (
+                                    <div className="stack" key={`${index}-${i}`} style={{'--random-color': getRandomColor()}}>
+                                        <img src={stackItem.icon} alt={stackItem.value} title={stackItem.value} />
+                                        <p>{stackItem.years}</p>
+                                    </div>
+                                ))
+                            ))}
+                        </ul>
+                    </div>
+                )
+            }
         </section>
     )
 }

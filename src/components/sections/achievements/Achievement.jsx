@@ -1,6 +1,6 @@
 import AchievementCard from '../../cards/achievement card/AchievementCard';
 import './achievement.css';
-import achievementData from '../../../datas/achievements.json';
+import { achievements } from '../../../datas/achievements.js';
 import { useRef, useEffect, useState } from 'react';
 
 export default function Achievement() {
@@ -39,7 +39,7 @@ export default function Achievement() {
 
             let newIndex = Math.round(scrollLeft / slideWidth);
 
-            const maxIndex = achievementData.length - 1;
+            const maxIndex = achievements.length - 1;
             if (newIndex > maxIndex) {
                 newIndex = maxIndex;
             }
@@ -74,7 +74,7 @@ export default function Achievement() {
                 </button>
             </div>
             <div className="content" ref={contentRef} data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                {achievementData.map((achievement, i) => (
+                {achievements.map((achievement, i) => (
                     <AchievementCard 
                         key={i}
                         image={achievement.image}
@@ -87,7 +87,7 @@ export default function Achievement() {
                 ))} 
             </div>
             <div className="carousel-dots">
-                {achievementData.map((_, index) => (
+                {achievements.map((_, index) => (
                     <i 
                         key={index} 
                         className={`dot ${index === activeIndex ? 'active' : ''}`}

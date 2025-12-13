@@ -1,4 +1,5 @@
 import './about.css'
+import me from '../../../assets/me/jerson-about.jpg'
 
 export default function About() {
     const aboutData = [
@@ -10,7 +11,7 @@ export default function About() {
     return (
         <section className="about-container" id='about' data-aos="fade-up" data-aos-duration="1000"> 
             <div className="img-container" data-aos="fade-right" data-aos-duration="1000">
-                <img className='me' src="assets/me/jerson-about.jpg" alt="Jerson" />
+                <img className='me' src={me} alt="Jerson" />
             </div>
             <div className="content" data-aos="fade-left" data-aos-duration="1000">
                 <div className="about-header">

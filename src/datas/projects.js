@@ -1,16 +1,23 @@
-[
+const projectsImages = import.meta.glob('../assets/projects/*.{png,jpg,jpeg,webp}', { eager: true });
+
+const getImagePath = (filename) => {
+    const path = `../assets/projects/${filename}`;
+    return projectsImages[path]?.default || null;
+}
+
+export const projects = [
     {
         "id": 1,
         "title": "Mommy's Variety Store",
         "sub-title": "Desktop Application for Inventory Management, and Kiosk ready POS System",
         "category": "Academic",
-        "image": "/assets/projects/variety-store-menu.png",
+        "image": getImagePath('variety-store-menu.png'),
         "team-size": 2,
         "time-line": 3,
         "my-role": "Frontend Developer",
         "tech-stacks":[
-            {"label": "Java", "icon": "/assets/stacks/java.svg"},
-            {"label": "MS SQL", "icon": "/assets/stacks/mssql.svg"}
+            {"label": "Java", "icon": getImagePath('java.svg')},
+            {"label": "MS SQL", "icon": getImagePath('mssql.svg')}
         ],
         "overview": "Mommy's Variety Store Management System is a desktop application built with Java Swing for the graphical user interface (GUI) and Microsoft SQL Server as the primary database. The application is designed to manage inventory, categories, and other store-related operations. It also supports a legacy connection to Microsoft Access for backward compatibility with earlier database versions. This project is developed as part of a BSIT (Bachelor of Science in Information Technology) course requirement.",
         "features": [
@@ -32,16 +39,16 @@
         "title": "Account Receivables for Multi-Purpose Cooperative",
         "sub-title": "A web-based application for managing account receivables in a cooperative setting",
         "category": "Academic",
-        "image": "/assets/projects/coops.png",
+        "image": getImagePath('coops.png'),
         "team-size": 1,
         "time-line": 3,
         "my-role": "Full Stack Developer",
         "tech-stacks":[
-            {"label": "PHP", "icon": "/assets/stacks/php.svg"},
-            {"label": "Javascript", "icon": "/assets/stacks/js.svg"},
-            {"label": "HTML5", "icon": "/assets/stacks/html5.svg"},
-            {"label": "CSS3", "icon": "/assets/stacks/css3.svg"},
-            {"label": "My SQL", "icon": "/assets/stacks/mysql.svg"}
+            {"label": "PHP", "icon": getImagePath('php.svg')},
+            {"label": "Javascript", "icon": getImagePath('js.svg')},
+            {"label": "HTML5", "icon": getImagePath('html5.svg')},
+            {"label": "CSS3", "icon": getImagePath('css3.svg')},
+            {"label": "My SQL", "icon": getImagePath('mysql.svg')}
         ],
         "overview": "An individual project Online Account Receivables (OAR) System for a Multi-Purpose Cooperative during my 2nd Year on Web System Technologies subject. This system streamlines the management of cooperative accounts, transactions, and financial records, enhancing efficiency and transparency.",
         "features": [
@@ -62,16 +69,16 @@
         "title": "Laundry Shop Management System",
         "sub-title": "A modern, efficient, and student-centered web and mobile platform for small to medium-sized laundry shops.",
         "category": "Academic",
-        "image": "/assets/projects/labable.png",
+        "image": getImagePath('labable.png'),
         "team-size": 5,
         "time-line": 2,
         "my-role": "Full Stack Developer",
         "tech-stacks":[
-            {"label": "React", "icon": "/assets/stacks/react.svg"},
-            {"label": "Javascript", "icon": "/assets/stacks/js.svg"},
-            {"label": "HTML5", "icon": "/assets/stacks/html5.svg"},
-            {"label": "CSS3", "icon": "/assets/stacks/css3.svg"},
-            {"label": "Firebase", "icon": "/assets/stacks/firebase.svg"}
+            {"label": "React", "icon": getImagePath('react.svg')},
+            {"label": "Javascript", "icon": getImagePath('js.svg')},
+            {"label": "HTML5", "icon": getImagePath('html5.svg')},
+            {"label": "CSS3", "icon": getImagePath('css3.svg')},
+            {"label": "Firebase", "icon": getImagePath('firebase.svg')}
         ],
         "overview": "Labable is a comprehensive laundry management ecosystem designed to modernize operations for small-to-medium businesses near university campuses. Integrating both Transaction Processing (TPS) and Management Information Systems (MIS), the platform bridges the gap between service providers and customers. It features a cross-platform mobile app for students to schedule and track services, alongside a web-based administration dashboard for owners to manage orders, automate payments, and analyze financial performance.",
         "features": [
