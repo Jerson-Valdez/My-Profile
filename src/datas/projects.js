@@ -66,7 +66,7 @@ export const projects = [
         ],
         "problem-solution": "To modernize a cooperative's manual accounting, I engineered a secure Online Account Receivables system using PHP and MySQL to manage complex user-transaction data. I implemented Role-Based Access Control (RBAC) and automated reporting to ensure scalability and security, resulting in a responsive platform that streamlines administrative workflows while guaranteeing member transparency.",
         "project-links": {
-            "github": "#",
+            "github": "https://github.com/Jerson-Valdez/ARUnionVZ.git",
             "live-demo": "https://valdez-project-multipurpose.infinityfreeapp.com/"
         }
     },
