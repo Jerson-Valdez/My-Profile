@@ -1,7 +1,7 @@
 .stack-category{
     flex: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     gap: 5px;
@@ -49,7 +49,7 @@
     transition: 0.3s ease-out;
 }
 
-.stack-category h5{
+.stack-category h1{
     text-align: center;
     font-size: 1rem;
 }

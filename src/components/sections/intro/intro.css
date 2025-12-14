@@ -46,6 +46,10 @@
     gap: 20px;
 }
 
+.intro-container .content .btn-container a{
+    text-decoration: none;
+}
+
 .intro-container .content .btn-container .view-work-btn{
     flex: 1;
     min-width: 160px;

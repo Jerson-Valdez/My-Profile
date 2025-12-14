@@ -2,6 +2,14 @@ import { useParams } from 'react-router';
 import './project.css';
 import {projects} from '../../datas/projects.js';
 import { useEffect, useState } from 'react';
+import { 
+    IconBrandGithub, 
+    IconWorld, 
+    IconArrowLeft, 
+    IconCalendarMonth, 
+    IconUsersGroup,
+    IconCode  
+} from '@tabler/icons-react';
 
 export default function Project() {
     const projectID = useParams()
@@ -13,7 +21,8 @@ export default function Project() {
     return(
         <main className="project-page-container">
             <a className={'back-btn'} href='/'>
-                <i className='ti ti-arrow-left'></i>Back to Projects
+                <IconArrowLeft size={24}/>
+                Back to Projects
                 </a>
             {projectData &&
                 <div className="content">
@@ -25,15 +34,15 @@ export default function Project() {
                     <img src={projectData.image} alt={projectData.title} />
                     <div className="row">
                         <div className="row-box">
-                            <h6><i className='ti ti-calendar-month'></i> Timeline</h6>
+                            <h6><IconCalendarMonth size={24}/> Timeline</h6>
                             <p>{projectData["time-line"]}</p>
                         </div>
                         <div className="row-box">
-                            <h6><i className='ti ti-users-group'></i>Team Size</h6>
+                            <h6><IconUsersGroup size={24}/>Team Size</h6>
                             <p>{projectData["team-size"]}</p>                            
                         </div>
                         <div className="row-box">
-                            <h6><i className='ti ti-code'></i>My Role</h6>
+                            <h6><IconCode size={24}/>My Role</h6>
                             <p>{projectData["my-role"]}</p>                            
                         </div>
                     </div>
@@ -73,12 +82,12 @@ export default function Project() {
                     <div className="actions">
                         <a href={projectData["project-links"].github} 
                             target="_blank" rel="noopener noreferrer">
-                            <i className="ti ti-brand-github"></i>
+                            <IconBrandGithub size={24}/>
                             Github
                             </a>
                         <a href={projectData["project-links"]["live-demo"]} 
                             target="_blank" rel="noopener noreferrer">
-                            <i className="ti ti-world"></i>
+                            <IconWorld size={24}/>
                             Live Demo
                             </a>
                     </div>

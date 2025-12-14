@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jerson-valdez.vercel.app/sitemap.xml

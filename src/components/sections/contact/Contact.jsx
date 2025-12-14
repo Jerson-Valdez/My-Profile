@@ -2,6 +2,14 @@ import { useState, useRef } from 'react';
 import './contact.css'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import { 
+        IconMail,
+        IconPhone,
+        IconLink,
+        IconBrandLinkedin,
+        IconBrandGithub,
+        IconBrandFacebook
+ } from '@tabler/icons-react';
 
 export default function Contact() {
     const [fullname, setFullname] = useState('');
@@ -106,33 +114,33 @@ export default function Contact() {
                 </form>
                 <div className="socials">
                     <div className="email">
-                        <i className='ti ti-mail'></i>
+                        <IconMail />
                         <span>valdezjerson8624@gmail.com</span>
                     </div>
                     <div className="phone">
-                        <i className='ti ti-phone'></i>
+                        <IconPhone />
                         <span>+63 927 654 3210</span>
                     </div>
                     <div className="social-links">
-                        <i className='ti ti-link'><h5>Socials</h5></i>
+                        <h3><IconLink /> Socials</h3>
                         <a href="
                             https://www.linkedin.com/in/jerson-valdez-962225382/" target="_blank" rel="noopener noreferrer">
-                            <i className='ti ti-brand-linkedin'></i>
+                            <IconBrandLinkedin />
                             <span>Jerson Valdez</span>
                         </a>
                         <a href="
                             https://github.com/Jerson-Valdez" target="_blank" rel="noopener noreferrer">
-                            <i className='ti ti-brand-github'></i>
+                            <IconBrandGithub />
                             <span>Jerson-Valdez</span>
                         </a>
                         <a href="
                             https://www.facebook.com/valdez.jerson.5/" target="_blank" rel="noopener noreferrer">
-                            <i className='ti ti-brand-facebook'></i>
+                            <IconBrandFacebook />
                             <span>Jerson Patrick Valdez</span>
                         </a>
                     </div>
                     <div className="availability">
-                        <h5>Availability</h5>
+                        <h4>Availability</h4>
                         <ul>
                             <li>Freelance Projects</li>
                             <li>Simple Projects</li>

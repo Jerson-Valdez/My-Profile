@@ -12,7 +12,7 @@ export const achievements = [
         "date": "May 2025",
         "where": "Bulacan State University (Main Campus)",
         "description": "Academic excellence recognized for achieving Dean's List award for \"First Year 2nd Sem and Second Year 1st Sem of year 2024\" at Bulacan State University.",
-        "image": getImagePath('deanslist2025.jpg') 
+        "image": getImagePath('deanslist2025.webp') 
     },
     {
         "title": "Agent Blazer Champion",
