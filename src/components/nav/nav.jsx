@@ -1,36 +1,40 @@
 import { Link } from 'react-scroll'
 import './nav.css'
 import { useEffect, useState } from 'react'
+import { 
+    IconInfoSquareRounded, 
+    IconStar, 
+    IconBriefcase, 
+    IconAward, 
+    IconMail, 
+    IconSun, 
+    IconMoon, 
+    IconMenu4 
+} from '@tabler/icons-react'
 
 export default function Nav() {
     const [toggleMenu, setToggleMenu] = useState(false)
-    const [toggleTheme, setToggleTheme] = useState(localStorage.getItem('theme'))
-    const [classTheme, setClassTheme] = useState('')
+    const [toggleTheme, setToggleTheme] = useState(localStorage.getItem('theme') || 'light')
+
     const navLink = [
-        {name: 'About', to: 'about', icon: 'ti ti-info-square-rounded' },
-        {name: 'Skills', to: 'skills', icon: 'ti ti-star' },
-        {name: 'Projects', to: 'projects', icon: 'ti ti-briefcase' },
-        {name: 'Achievements', to: 'achievements', icon: 'ti ti-award' },
-        {name: 'Contact', to: 'contact', icon: 'ti ti-mail' },
+        {name: 'About', to: 'about', icon: <IconInfoSquareRounded size={20} /> },
+        {name: 'Skills', to: 'skills', icon: <IconStar size={20} /> },
+        {name: 'Projects', to: 'projects', icon: <IconBriefcase size={20} /> },
+        {name: 'Achievements', to: 'achievements', icon: <IconAward size={20} /> },
+        {name: 'Contact', to: 'contact', icon: <IconMail size={20} /> },
     ]
 
     useEffect(() => {
-        console.log(localStorage.getItem('theme'))
-        if(localStorage.getItem('theme'))
-            setToggleTheme(localStorage.getItem('theme'))
+        const body = document.body
+        const storedTheme = localStorage.getItem('theme')
 
-            const body = document.body
-            if(toggleTheme === 'light') {
-                body.setAttribute('data-theme', 'light')
-                setToggleTheme('light')
-                localStorage.setItem('theme', 'light')
-                setClassTheme('ti ti-sun')
-            }
-        else {
+        if(storedTheme === 'light') {
+            body.setAttribute('data-theme', 'light')
+            setToggleTheme('light')
+        } else if (storedTheme === 'dark') {
+            body.setAttribute('data-theme', 'dark')
             setToggleTheme('dark')
-            localStorage.setItem('theme', 'dark')
             document.getElementById('themeIcon').classList.add('dark')
-            setClassTheme('ti ti-moon')
         }
     }, [])
 
@@ -41,13 +45,11 @@ export default function Nav() {
             body.setAttribute('data-theme', 'light')
             localStorage.setItem('theme', 'light')
             document.getElementById('themeIcon').classList.remove('dark')
-            setClassTheme('ti ti-sun')
         } else {
             setToggleTheme('dark')
             body.setAttribute('data-theme', 'dark')
             localStorage.setItem('theme', 'dark')
             document.getElementById('themeIcon').classList.add('dark')
-            setClassTheme('ti ti-moon')
         }
     }
 
@@ -66,6 +68,7 @@ export default function Nav() {
         <nav className='nav-container' data-aos="fade-down">
             <Link 
                 to={'intro'} 
+                href='#intro'
                 smooth={true} 
                 duration={500} 
                 spy={true}
@@ -73,30 +76,46 @@ export default function Nav() {
                 <img src="/logo.svg" alt="Jerson Valdez Logo" className='nav-logo'/>
                 <span className='nav-logo'>jv.</span>
             </Link>
+
             <ul id='links'>
                 {navLink.map((link, i) =>{
                     return (
                         <li key={i}>
                             <Link 
                                 to={link.to} 
+                                href={`#${link.to}`}
                                 smooth={true} 
                                 duration={500} 
                                 spy={true} 
                                 activeClass='active-link' 
                                 className='nav-link'>
-
-                                <i className={link.icon}></i>{link.name}
+                                
+                                {link.icon} 
+                                {link.name}
                             </Link>
                         </li>
                     )
                 })}
             </ul>
+
             <div className="nav-right">
                 <div className="theme-icon" id='themeIcon' onClick={handleToggleTheme}>
-                    <i className={classTheme}></i>
+                    {toggleTheme === 'light' ? 
+                        <IconSun size={15} fontWeight={500}/> 
+                        : 
+                        <IconMoon size={15} fontWeight={500}/>}
                 </div>
-                <Link to='contact' className='contact-btn'>Contact Me</Link>
-                <i className='ti ti-menu-4' onClick={handleToggleMenu}></i>
+
+                <Link 
+                    to='contact' 
+                    href='#contact' 
+                    className='contact-btn'>
+                        Contact Me
+                </Link>
+                
+                <div className="menu-icon" onClick={handleToggleMenu} style={{ cursor: 'pointer' }}>
+                    <IconMenu4 size={30} />
+                </div>
             </div>
         </nav>
     )

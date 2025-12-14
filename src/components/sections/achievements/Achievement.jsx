@@ -2,6 +2,7 @@ import AchievementCard from '../../cards/achievement card/AchievementCard';
 import './achievement.css';
 import { achievements } from '../../../datas/achievements.js';
 import { useRef, useEffect, useState } from 'react';
+import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 
 export default function Achievement() {
     const contentRef = useRef(null);
@@ -34,7 +35,6 @@ export default function Achievement() {
             
             const style = window.getComputedStyle(contentRef.current);
             const gap = parseFloat(style.gap) || 0;
-            
             const slideWidth = card.offsetWidth + gap;
 
             let newIndex = Math.round(scrollLeft / slideWidth);
@@ -66,11 +66,11 @@ export default function Achievement() {
                 <p>Defining moments and key achievements that shape my path as a developer.</p>
             </div>
             <div className="carousel-controls">
-                <button className="carousel-btn prev-btn" onClick={scrollLeft}>
-                    <i className="ti ti-chevron-left"></i>
+                <button aria-label="Previous Achievement" className="carousel-btn prev-btn" onClick={scrollLeft}>
+                    <IconChevronLeft size={24}/>
                 </button>
-                <button className="carousel-btn next-btn" onClick={scrollRight}>
-                    <i className="ti ti-chevron-right"></i>
+                <button aria-label="Next Achievement" className="carousel-btn next-btn" onClick={scrollRight}>
+                    <IconChevronRight size={24}/>
                 </button>
             </div>
             <div className="content" ref={contentRef} data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">

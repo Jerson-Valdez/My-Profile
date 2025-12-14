@@ -37,10 +37,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: stretch;
     justify-content: center;
     gap: 10px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-container form{
@@ -160,6 +160,15 @@
     transition: 0.3s ease-out;
 }
 
+.contact-container .contact-info .social-links > h3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: var(--fg-secondary);
+}
 
 .contact-container .contact-info .social-links a span{
     font-size: 0.9rem;
@@ -174,6 +183,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.contact-container .availability h4{
+    font-size: 1rem;
+    color: var(--fg-secondary);
 }
 
 .contact-container .availability ul{

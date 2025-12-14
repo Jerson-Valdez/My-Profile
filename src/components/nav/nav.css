@@ -15,10 +15,11 @@
     box-sizing: border-box;
 }
 
-.nav-container .logo{
+.nav-container .logo {
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-decoration: none;
 }
 
 .nav-container .logo:hover {
@@ -30,7 +31,7 @@
     width: auto;
 }
 
-.nav-container .nav-logo{
+.nav-container .nav-logo {
     font-family: var(--tertiary-font);
     font-weight: 1000;
     font-size: 2rem;
@@ -56,9 +57,12 @@
     color: var(--fg-secondary);
     cursor: pointer;
     position: relative;
+    display: flex; 
+    align-items: center;
+    text-decoration: none;
 }
 
-.nav-container ul .nav-link.active-link::before{
+.nav-container ul .nav-link.active-link::before {
     content: '';
     background-color: var(--sf-dark);
     height: 3px;
@@ -66,7 +70,7 @@
     transition: 0.5s ease-out;
 }
 
-.nav-container ul li i{
+.nav-container ul .nav-link svg {
     display: none;
 }
 
@@ -100,12 +104,14 @@
     align-items: center;
     background-color: var(--bg-color-alt);
     border-radius: 20px;
+    width: 55px;
+    height: 32px; 
     padding: 3px 5px;
-    width: 45px;
+    box-sizing: border-box;
 }
 
-.nav-container .theme-icon.dark i {
-    transform: translateX(20px);
+.nav-container .theme-icon.dark svg {
+    animation: forwards dark 0.3s ease-out;
 }
 
 .nav-container .theme-icon:hover {
@@ -115,14 +121,13 @@
     transition: 0.3s ease-out;
 }
 
-.nav-container .theme-icon i {
-    font-size: 0.9rem;
+.nav-container .theme-icon svg {
     color: var(--btn-fg-color);
     background-color: color-mix(in srgb, var(--sf-dark), transparent 20%);
     border-radius: 50%;
-    padding: 5px;
+    padding: 5px; 
     cursor: pointer;
-    transition: transform 0.4s ease-out;
+    animation: forwards light 0.3s ease-out;
 }
 
 .nav-container .contact-btn {
@@ -135,6 +140,7 @@
     padding: 10px 25px;
     animation: contactLight 3s infinite;
     transition: 0.5s ease;
+    text-decoration: none; 
 }
 
 .nav-container .contact-btn:hover {
@@ -152,14 +158,16 @@
     }
 }
 
-.nav-container .ti.ti-menu-4 {
-    display: none;
+.nav-container .menu-icon {
+    display: none; 
     background-color: color-mix(in srgb, var(--sf-dark), transparent 80%);
     padding: 5px;
-    font-size: 2rem;
     color: var(--sf-light);
     border-radius: 12px;
     cursor: pointer;
+    display: none; 
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -172,7 +180,7 @@
         display: none;
     }
 
-    .nav-container ul{
+    .nav-container ul {
         position: absolute;
         align-items: start;
         top: -30px;
@@ -185,12 +193,30 @@
         z-index: -1;
     }
 
-    .nav-container .ti.ti-menu-4 {
-        display: block;
+    .nav-container .menu-icon {
+        display: flex; 
     }
 
-    .nav-container ul li i{
+    .nav-container ul .nav-link svg {
         display: inline-block;
         margin-right: 10px;
+    }
+}
+
+@keyframes dark {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes light {
+    0% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0px);
     }
 }

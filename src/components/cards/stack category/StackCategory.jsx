@@ -3,6 +3,7 @@ import './stack-category.css';
 export default function StackCategory({label, stack, onToggle, isActive}) {
     return (
         <div className={`stack-category ${isActive ? 'active' : ''}`} onClick={() => onToggle(label)}>
+            <h2>{label}</h2>
             <div className="stack-items">
                 {stack.map((stackItem, i) => {
                     return (
@@ -17,7 +18,6 @@ export default function StackCategory({label, stack, onToggle, isActive}) {
                     }
                     )}
             </div>
-            <h5>{label}</h5>
         </div>
     )
 }

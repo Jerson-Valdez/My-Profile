@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router';
 import './project-card.css'
+import { IconBrandGithub, IconWorld } from '@tabler/icons-react'
 
 export default function ProjectCard({id, image, title, description, stacks, links}) {
     const navigate = useNavigate();
@@ -30,12 +31,12 @@ export default function ProjectCard({id, image, title, description, stacks, link
                     </div>
                     <div className="project-links">
                         {links.github && (
-                            <a href={links.github} target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
-                                <i className='ti ti-brand-github'></i></a>
+                            <a href={links.github} aria-label={`${title} GitHub Link`} target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
+                                <IconBrandGithub size={24}/></a>
                         )}
                         {links["live-demo"] && (
-                            <a href={links["live-demo"]} target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
-                                <i className='ti ti-world'></i></a>
+                            <a href={links["live-demo"]} aria-label={`${title} Live Demo Link`} target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
+                                <IconWorld size={24}/></a>
                         )}
                     </div>
                 </div>

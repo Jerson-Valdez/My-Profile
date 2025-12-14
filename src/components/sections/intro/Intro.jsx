@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll'
 import './intro.css'
 import me from '../../../assets/me/jerson-intro.png'
+import { IconBriefcase, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
 
 export default function Intro() {
   return (
@@ -16,18 +17,30 @@ export default function Intro() {
           </p>
 
           <div className="btn-container">
-            <Link to="projects" smooth={true} duration={500} spy={true} className='view-work-btn'>
+            <Link 
+              to="projects" 
+              href='#projects' 
+              smooth={true} 
+              duration={500} 
+              spy={true} 
+              className='view-work-btn'>
               View My Work 
-              <i className='ti ti-arrow-right'></i>
+              <IconBriefcase size={18}/>
             </Link>
-            <Link to="contact" smooth={true} duration={500} spy={true} className='get-in-touch-btn'>
+            <Link 
+              to="contact" 
+              href='#contact' 
+              smooth={true} 
+              duration={500} 
+              spy={true} 
+              className='get-in-touch-btn'>
               Get In Touch 
             </Link>
           </div>
 
           <div className="quick-link">
-            <a target='blank' href="https://github.com/Jerson-Valdez"><i className='ti ti-brand-github'></i></a>
-            <a target='blank' href="https://www.linkedin.com/in/jerson-valdez-962225382/"><i className='ti ti-brand-linkedin'></i> </a>
+            <a aria-label='Jerson Github Link' target='blank' href="https://github.com/Jerson-Valdez"><IconBrandGithub size={24}/></a>
+            <a aria-label='Jerson LinkedIn Link' target='blank' href="https://www.linkedin.com/in/jerson-valdez-962225382/"><IconBrandLinkedin size={24}/> </a>
           </div>
         </div>
         
