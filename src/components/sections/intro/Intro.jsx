@@ -44,7 +44,12 @@ export default function Intro() {
           </div>
         </div>
         
-        <img src={me} alt="Jerson Patrick Valdez"/>
+        <img 
+          src={me} 
+          loading="eager" 
+          fetchpriority="high" 
+          alt="Jerson Patrick Valdez"/>
+          
       </div>
     </section>
   )
