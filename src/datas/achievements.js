@@ -23,6 +23,14 @@ export const achievements = [
         "image": getImagePath('agentblazer.png') 
     },
     {
+        "title": "Salesforce Supported Virtual Internship Program",
+        "category": "Certification",
+        "date": "January 2026",
+        "where": "Bulacan State University (Main Campus)",
+        "description": "Recognized for completing the selected trailhead modules and a capstone project during the 8-weeks virtual internship program from August to November 2025 at Bulacan State University. ",
+        "image": getImagePath('skillwallet.webp') 
+    },
+    {
         "title": "Operating System Basics",
         "category": "Certification",
         "date": "March 2024",
