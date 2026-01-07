@@ -21,8 +21,9 @@
 }
 
 .arch-item:hover {
-    transform: skewY(0) scale(1.05);
+    transform: skewY(0) scale(1.05) translateZ(50px);
     transition: 0.5s ease-out;
+    z-index: 1;
 }
 
 .arch-item:not(:last-child):hover {
@@ -98,3 +99,5 @@
     box-shadow: none;
     transition: 0.5s ease-out;
 }
+
+/* removed .arch-item:not(:hover) to prevent z-index jumping */
