@@ -12,6 +12,7 @@ export const allStacks =[
             {"value": "React.js", "icon": getStackIconPath('react.svg'), "years": 1},
             {"value": "HTML5", "icon": getStackIconPath('html5.svg'), "years": 3},
             {"value": "CSS 3", "icon": getStackIconPath('css3.svg'), "years": 3},
+            {"value": "Tailwind CSS", "icon": getStackIconPath('tailwindcss.svg'), "years": 1},
             {"value": "Vite.js", "icon": getStackIconPath('vitejs.svg'), "years": 1},
             {"value": "Figma", "icon": getStackIconPath('figma.svg'), "years": 2},
             {"value": "JavaScript", "icon": getStackIconPath('js.svg'), "years": 2}
