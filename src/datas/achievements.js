@@ -7,6 +7,14 @@ const getImagePath = (filename) => {
 
 export const achievements = [
     {
+        "title": "President's Listers",
+        "category": "Academic",
+        "date": "May 2026",
+        "where": "Bulacan State University (Main Campus)",
+        "description": "Academic excellence recognized for achieving President's List award for \"Second Year 2nd Sem and Third Year 1st Sem of year 2025\" at Bulacan State University.",
+        "image": getImagePath('presidentslist2026.webp') 
+    },
+    {
         "title": "Deans Listers",
         "category": "Academic",
         "date": "May 2025",

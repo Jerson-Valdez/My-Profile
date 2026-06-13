@@ -8,7 +8,7 @@ export default function Footer() {
                 <p>Web Development Services</p>
             </div>
             <div className="rights">
-                <p>© 2025 Jerson. All rights reserved.</p>
+                <p>© 2026 Jerson. All rights reserved. Updated: because asked by someone</p>
                 <p>Built with React, Javascript & Vanilla CSS</p>
             </div>
         </footer>
