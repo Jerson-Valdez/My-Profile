@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import './contact.css'
 import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { 
         IconMail,
         IconPhone,
@@ -15,10 +16,18 @@ export default function Contact() {
     const [fullname, setFullname] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
     const form = useRef();
+    const recaptchaRef = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        const captchaValue = recaptchaRef.current.getValue();
+        if (!captchaValue) {
+            toast.error('Please verify that you are not a robot.');
+            return;
+        }
 
         emailjs.sendForm(
             import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -29,9 +38,14 @@ export default function Contact() {
             (result) => {
                 toast.success('Message sent successfully!');
                 e.target.reset();
+                recaptchaRef.current.reset();
+                setFullname('');
+                setEmail('');
+                setMessage('');
             },
             (error) => {
                 toast.error('An error occurred, please try again.');
+                recaptchaRef.current.reset();
             }
         )
     }
@@ -110,6 +124,12 @@ export default function Contact() {
                         <textarea id='message' name='message' placeholder='Your Message' required onChange={onMessageChange}></textarea>
                         <span className='error-message' id='messageError'></span>
                     </div>
+                    <div className="input-group" style={{ marginBottom: '1rem' }}>
+                        <ReCAPTCHA
+                            ref={recaptchaRef}
+                            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                        />
+                    </div>
                     <button type='submit' className='submit-btn'>Send Message</button>
                 </form>
                 <div className="socials">
@@ -119,7 +139,7 @@ export default function Contact() {
                     </div>
                     <div className="phone">
                         <IconPhone />
-                        <span>+63 927 654 3210</span>
+                        <span>+63 909 180 5448</span>
                     </div>
                     <div className="social-links">
                         <h3><IconLink /> Socials</h3>
