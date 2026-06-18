@@ -9,7 +9,8 @@ import {
         IconLink,
         IconBrandLinkedin,
         IconBrandGithub,
-        IconBrandFacebook
+        IconBrandFacebook,
+        IconBrandInstagram
  } from '@tabler/icons-react';
 
 export default function Contact() {
@@ -157,6 +158,10 @@ export default function Contact() {
                             https://www.facebook.com/valdez.jerson.5/" target="_blank" rel="noopener noreferrer">
                             <IconBrandFacebook />
                             <span>Jerson Patrick Valdez</span>
+                        </a>
+                        <a href="https://www.instagram.com/jewsonvaldez/" target="_blank" rel="noopener noreferrer">
+                            <IconBrandInstagram />
+                            <span>jewsonvaldez</span>
                         </a>
                     </div>
                     <div className="availability">
