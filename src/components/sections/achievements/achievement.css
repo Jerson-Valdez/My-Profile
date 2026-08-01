@@ -4,7 +4,9 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    gap: 50px;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .achievement-container .header {
@@ -41,7 +43,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 125%;
+    width: 55%;
     position: absolute;
     top: 50%;
     z-index: 5;
@@ -93,8 +95,8 @@
 
 .achievement-container .content.coverflow-stage {
     width: 100%;
-    max-width: 900px;
-    height: 450px;
+    max-width: 550px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +125,6 @@
     }
 
     .achievement-container .content.coverflow-stage {
-        height: 400px;
+        height: 500px;
     }
 }

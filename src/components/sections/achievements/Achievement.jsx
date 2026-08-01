@@ -21,7 +21,7 @@ export default function Achievement() {
     };
 
     return (
-        <section className='achievement-container' id='achievements'>
+        <section className='achievement-container' id='achievements' data-aos="fade-up" data-aos-duration="1000">
             <div className="header">
                 <div className="title">
                     <h2>Milestone</h2>
@@ -39,7 +39,7 @@ export default function Achievement() {
                 </button>
             </div>
 
-            <div className="content coverflow-stage">
+            <div className="content coverflow-stage" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                 {achievements.map((achievement, i) => (
                     <AchievementCard 
                         key={i}

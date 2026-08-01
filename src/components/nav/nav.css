@@ -173,7 +173,7 @@
 @media (max-width: 768px) {
     .nav-container {
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 10px;
     }
 
     .nav-container .contact-btn {
