@@ -1,62 +1,26 @@
 import AchievementCard from '../../cards/achievement card/AchievementCard';
 import './achievement.css';
 import { achievements } from '../../../datas/achievements.js';
-import { useRef, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 
 export default function Achievement() {
-    const contentRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+    const total = achievements.length;
 
     const scrollLeft = () => {
-        if (contentRef.current) {
-            contentRef.current.scrollBy({ left: -500, behavior: 'smooth' });
-        }
+        setActiveIndex((prev) => (prev - 1 + total) % total);
     };
-    
+
     const scrollRight = () => {
-        if (contentRef.current) {
-            contentRef.current.scrollBy({ left: 500, behavior: 'smooth' });
-        }
+        setActiveIndex((prev) => (prev + 1) % total);
     };
 
     const goToSlide = (index) => {
-        const scrollAmount = contentRef.current.children[index].offsetLeft - contentRef.current.offsetLeft;
-        contentRef.current.scrollTo({
-            left: scrollAmount,
-            behavior: 'smooth'
-        });
+        setActiveIndex(index);
     };
 
-    const handleScroll = () => {
-        if (contentRef.current && contentRef.current.children.length > 0) {
-            const scrollLeft = contentRef.current.scrollLeft;
-            const card = contentRef.current.children[0];
-            
-            const style = window.getComputedStyle(contentRef.current);
-            const gap = parseFloat(style.gap) || 0;
-            const slideWidth = card.offsetWidth + gap;
-
-            let newIndex = Math.round(scrollLeft / slideWidth);
-
-            const maxIndex = achievements.length - 1;
-            if (newIndex > maxIndex) {
-                newIndex = maxIndex;
-            }
-
-            setActiveIndex(newIndex);
-        }
-    };
-
-    useEffect(() => {
-        const content = contentRef.current;
-        content.addEventListener('scroll', handleScroll);
-        return () => {
-            content.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    return(
+    return (
         <section className='achievement-container' id='achievements'>
             <div className="header">
                 <div className="title">
@@ -65,6 +29,7 @@ export default function Achievement() {
                 </div>
                 <p>Defining moments and key achievements that shape my path as a developer.</p>
             </div>
+
             <div className="carousel-controls">
                 <button aria-label="Previous Achievement" className="carousel-btn prev-btn" onClick={scrollLeft}>
                     <IconChevronLeft size={24}/>
@@ -73,28 +38,34 @@ export default function Achievement() {
                     <IconChevronRight size={24}/>
                 </button>
             </div>
-            <div className="content" ref={contentRef} data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+
+            <div className="content coverflow-stage">
                 {achievements.map((achievement, i) => (
                     <AchievementCard 
                         key={i}
+                        index={i}
+                        activeIndex={activeIndex}
+                        totalCards={total}
                         image={achievement.image}
                         title={achievement.title}
                         description={achievement.description}
                         date={achievement.date}
                         where={achievement.where}
                         category={achievement.category}
+                        onClick={() => goToSlide(i)}
                     />
                 ))} 
             </div>
+
             <div className="carousel-dots">
                 {achievements.map((_, index) => (
                     <i 
                         key={index} 
                         className={`dot ${index === activeIndex ? 'active' : ''}`}
-                        onClick={() => goToSlide(index)}>
-                        </i>
+                        onClick={() => goToSlide(index)}
+                    />
                 ))}
             </div>
         </section>
-    )
+    );
 }

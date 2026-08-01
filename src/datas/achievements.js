@@ -15,7 +15,7 @@ export const achievements = [
         "image": getImagePath('presidentslist2026.webp') 
     },
     {
-        "title": "Deans Listers",
+        "title": "Dean's Listers",
         "category": "Academic",
         "date": "May 2025",
         "where": "Bulacan State University (Main Campus)",
