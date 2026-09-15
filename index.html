@@ -29,11 +29,18 @@
   <body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+      // 1. Detect crawlers and Google's Inspection Tool
       const isBot = /bot|googlebot|google-inspectiontool|crawler|spider|robot|crawling/i.test(navigator.userAgent);
       
-      AOS.init({
-        disable: isBot 
-      });
+      // 2. If it is a bot, inject CSS to force all AOS elements to be visible instantly
+      if (isBot) {
+        const style = document.createElement('style');
+        style.innerHTML = '[data-aos] { opacity: 1 !important; transform: none !important; visibility: visible !important; }';
+        document.head.appendChild(style);
+      }
+
+      // 3. Initialize AOS normally for human visitors
+      AOS.init();
     </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
