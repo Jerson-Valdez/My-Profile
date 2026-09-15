@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Jerson Valdez</title>
     <meta name="description" content="Portfolio of Jerson Patrick Valdez, an IT student at Bulacan State University specializing in Web and Mobile Application Development" />
-    <meta name="keywords" content="Jerson Patrick Valdez, Web Developer, Android Developer, Bulacan State University, React Developer, PHP Developer, Portfolio, Profile" />
+    <meta name="keywords" content="Jerson Patrick Valdez, Web Developer, Android Developer, Bulacan State University, React Developer, PHP Developer, Mobile Developer, Python Developer, Portfolio, Profile" />
     <meta name="author" content="Jerson Patrick Valdez" />
 
     <!-- For Preview Card -->
@@ -29,7 +29,11 @@
   <body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      const isBot = /bot|googlebot|google-inspectiontool|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+      
+      AOS.init({
+        disable: isBot 
+      });
     </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
