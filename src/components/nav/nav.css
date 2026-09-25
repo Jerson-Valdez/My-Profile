@@ -134,7 +134,6 @@
     font-weight: 500;
     font-size: 0.9rem;
     cursor: pointer;
-    background-image: linear-gradient(to right, var(--sf-dark), var(--sf-light));
     border-radius: 12px;
     color: var(--btn-fg-color);
     padding: 10px 25px;
@@ -146,15 +145,16 @@
 .nav-container .contact-btn:hover {
     transition: 0.3s ease;
     transform: translateY(-1px);
-    background-image: none;
 }
 
 @keyframes contactLight {
     0%, 100% {
-        box-shadow: -1px 0 0 2px var(--sf-dark) inset;
+        background-color: var(--sf-dark);
+        box-shadow: 0 0 10px 2px var(--sf-light);
     }
     50% {
-        box-shadow: 1px 0 0 2px var(--sf-light) inset;
+        background-color: var(--sf-light);
+        box-shadow: 0 0 10px 2px var(--sf-dark);
     }
 }
 
