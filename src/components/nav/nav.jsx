@@ -11,6 +11,7 @@ import {
     IconMoon, 
     IconMenu4 
 } from '@tabler/icons-react'
+import resume from '../../assets/resume/Jerson Patrick Valdez - Resume.pdf'
 
 export default function Nav() {
     const [toggleMenu, setToggleMenu] = useState(false)
@@ -106,12 +107,13 @@ export default function Nav() {
                         <IconMoon size={15} fontWeight={500}/>}
                 </div>
 
-                <Link 
-                    to='contact' 
-                    href='#contact' 
-                    className='contact-btn'>
-                        Contact Me
-                </Link>
+                <a 
+                    href={resume} 
+                    className='contact-btn' 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        Resume
+                </a>
                 
                 <div className="menu-icon" onClick={handleToggleMenu} style={{ cursor: 'pointer' }}>
                     <IconMenu4 size={30} />
