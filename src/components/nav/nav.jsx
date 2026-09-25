@@ -11,7 +11,7 @@ import {
     IconMoon, 
     IconMenu4 
 } from '@tabler/icons-react'
-import resume from '/resume/Jerson Patrick Valdez - Resume.pdf'
+import resume from '/Jerson-Valdez-Resume.pdf'
 
 export default function Nav() {
     const [toggleMenu, setToggleMenu] = useState(false)
