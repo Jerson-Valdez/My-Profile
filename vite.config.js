@@ -46,6 +46,7 @@ export default defineConfig({
       },
       workbox: { //para magkasya yung mga 5mb files ng offline caching
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        navigateFallbackDenylist: [/^\/.*\.pdf$/],
       } 
     })
   ],
