@@ -23,6 +23,14 @@ export const achievements = [
         "image": getImagePath('deanslist2025.webp') 
     },
     {
+        "title": "IT Specialist Python",
+        "category": "Certification",
+        "date": "October 2026",
+        "where": "Certiport via Compass at Bulacan State University (Main Campus)",
+        "description": "Earned official certification demonstrating proficiency in Python programming logic, syntax, and data structures.",
+        "image": getImagePath('IT-Specialist_Python.png') 
+    },
+    {
         "title": "Agent Blazer Champion",
         "category": "Certification",
         "date": "September 2025",
