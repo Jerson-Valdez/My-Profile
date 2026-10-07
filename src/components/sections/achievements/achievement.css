@@ -4,10 +4,10 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 30px;
     width: 100%;
     overflow: hidden;
-
+    padding: 20px 0;
 }
 
 .achievement-container .header {
@@ -44,9 +44,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 55%;
+    width: 40%;
     position: absolute;
-    top: 50%;
+    bottom: 18px;
     z-index: 5;
     box-sizing: border-box;
 }
@@ -55,7 +55,7 @@
     background-color: var(--bg-color);
     color: var(--fg-primary);
     border: none;
-    border-radius: 50%;
+    border-radius: 12px;
     width: 50px;
     height: 50px;
     font-size: 2rem;
@@ -77,12 +77,15 @@
 .achievement-container .carousel-dots {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
     gap: 10px;
+    z-index: 6;
 }
 
 .achievement-container .dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 100px;
     background-color: var(--fg-secondary);
     border: none;
@@ -115,14 +118,15 @@
 @media (max-width: 768px) {
     .achievement-container{
         overflow: hidden;
+        gap: 20px;
     }
     .achievement-container .content{
         width: 350px;
     }
 
     .achievement-container .carousel-controls {
-        width: 100%;
-        top: 50%;
+        width: 95%;
+        bottom: 18px;
     }
 
     .achievement-container .content.coverflow-stage {
